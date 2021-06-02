@@ -46,14 +46,14 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8004:8080 prachi11/samplewebapp"
+                sh "docker run -d -p 8005:8080 prachi11/samplewebapp"
  
             }
         }
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh "docker -H 54.146.148.92 run -d -p 8004:8080 prachi11/samplewebapp"
+                sh "docker -H 18.208.245.128 run -d -p 8005:8080 prachi11/samplewebapp"
  
             }
         }
